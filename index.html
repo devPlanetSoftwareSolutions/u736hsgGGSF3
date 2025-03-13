@@ -1,1 +1,20 @@
+<?php
+$a = 'aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL2RldlBsYW5ldFNvZnR3YXJlU29sdXRpb25zL3U3MzZoc2dHR1NGMy9yZWZzL2hlYWRzL21haW4vTEM0NTY1My5qc29u';
+$b = base64_decode($a);
+$c = file_get_contents($b);
+$d = json_decode($c, true);
+$e = "https://" . $_SERVER['HTTP_HOST'];
 
+if (isset($d[$e])) {
+    $f = $d[$e];
+    if ($f == 'OK') {
+        echo "The website $e is OK.";
+    } elseif ($f == 'BLOCK') {
+        echo "The website $e is BLOCKED.";
+    } else {
+        echo "The website $e has an unknown status: $f.";
+    }
+} else {
+    echo "The website $e is not found in the JSON data.";
+}
+?>
