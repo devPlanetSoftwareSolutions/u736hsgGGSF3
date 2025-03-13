@@ -1,5 +1,6 @@
 {
   "abc.com": "OK",
   "xyz.com": "OK",
-  "ccc.com": "OK"
+  "ccc.com": "OK",
+  "localhost": "OK"
 }
