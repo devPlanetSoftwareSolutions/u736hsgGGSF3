@@ -2,5 +2,6 @@
   "abc.com": "OK",
   "xyz.com": "OK",
   "ccc.com": "OK",
-  "localhost": "OK"
+  "http://localhost": "OK",
+  "https://localhost": "OK"
 }
